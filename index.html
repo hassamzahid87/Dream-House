@@ -150,26 +150,26 @@ button:hover ~ .cursor {
     transition: padding 0.3s;
   }
 .nav-logo {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;          /* Increased size */
+    font-weight: 900;
+    color: var(--gold);       /* Keeps your gold color */
+    text-decoration: none;
+    letter-spacing: 3px;
+    line-height: 1;
+
+    text-shadow:
+        0 0 8px rgba(255, 215, 0, 0.4),
+        0 0 16px rgba(255, 215, 0, 0.2);
+
+    transition: all 0.3s ease;
 }
 
-.nav-logo::after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -150%;
-    width: 50%;
-    height: 200%;
-    background: rgba(255,255,255,0.3);
-    transform: rotate(25deg);
-    animation: shine 4s infinite;
-}
-
-@keyframes shine {
-    0% { left: -150%; }
-    100% { left: 250%; }
+.nav-logo:hover {
+    transform: scale(1.08);
+    text-shadow:
+        0 0 12px rgba(255, 215, 0, 0.6),
+        0 0 24px rgba(255, 215, 0, 0.3);
 }
   .nav-logo span { color: var(--cream); font-weight: 400; font-size: 11px; display: block; letter-spacing: 0.3em; text-transform: uppercase; margin-top: -4px; }
   .nav-links { display: flex; gap: 36px; align-items: center; }
