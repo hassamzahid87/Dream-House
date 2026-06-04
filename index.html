@@ -33,28 +33,40 @@
     cursor: none;
   }
 
-  /* CUSTOM CURSOR */
-  .cursor {
-    width: 12px; height: 12px;
-    background: var(--gold);
+ /* CUSTOM CURSOR */
+.cursor {
+    width: 12px;
+    height: 12px;
+    background: #ff0000; /* Red */
     border-radius: 50%;
-    position: fixed; top: 0; left: 0;
-    pointer-events: none; z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
     transform: translate(-50%, -50%);
     transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
     mix-blend-mode: difference;
-  }
-  .cursor-ring {
-    width: 36px; height: 36px;
-    border: 1.5px solid var(--gold);
+}
+
+.cursor-ring {
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid #ff0000; /* Red */
     border-radius: 50%;
-    position: fixed; top: 0; left: 0;
-    pointer-events: none; z-index: 99998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99998;
     transform: translate(-50%, -50%);
     transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
     opacity: 0.7;
-  }
-  body:hover .cursor { opacity: 1; }
+}
+
+body:hover .cursor {
+    opacity: 1;
+}
 
   /* NOISE OVERLAY */
   body::before {
