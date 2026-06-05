@@ -6,15 +6,24 @@
 <title>RELICS — Action Figures & Antiques</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>.
-    
-<style>
 
-.theme-toggle{
+:root{
+    body.light-theme{
+    --black:#f7f4ee;
+    --off-black:#ffffff;
+    --dark:#ece7dc;
+    --cream:#111111;
+    --cream-dark:#333333;
+    --gray:#555555;
+    --border:rgba(0,0,0,.12);
+}
+  .theme-toggle{
     width:42px;
     height:42px;
     border:1px solid var(--border);
     background:transparent;
     color:var(--gold);
+    font-size:18px;
 }
 
 .theme-toggle:hover{
@@ -22,57 +31,10 @@
     color:var(--black);
 }
 
-:root{
-    --black:#0a0a0a;
-    --gold:#c9a84c;
-}
-
-body.light-theme{
-    --black:#f7f4ee;
-    --cream:#111111;
-}
-
-body{
-    background:var(--black);
-}
-
-</style>  
-    
-:root{
-    --black: #0a0a0a;
-    --off-black: #111111;
-    --dark: #1a1a1a;
-    --gold: #c9a84c;
-    --gold-light: #e8c97e;
-    --gold-dim: #7a6028;
-    --cream: #f5f0e8;
-    --cream-dark: #e8e0d0;
-    --red: #c0392b;
-    --white: #ffffff;
-    --gray: #888;
-    --border: rgba(201,168,76,0.25);
-}
-  
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   html { scroll-behavior: smooth; }
-<script>
-function toggleTheme() {
-
-    document.body.classList.toggle("light-theme");
-
-    const btn = document.querySelector(".theme-toggle");
-
-    if(document.body.classList.contains("light-theme")){
-        btn.innerHTML = "☀️";
-        localStorage.setItem("theme","light");
-    } else {
-        btn.innerHTML = "🌙";
-        localStorage.setItem("theme","dark");
-    }
-}
-
+    
 window.addEventListener("load", () => {
 
     const btn = document.querySelector(".theme-toggle");
@@ -1919,4 +1881,31 @@ document.addEventListener('keydown', e => {
 });
 </script>
 </body>
-</html>
+</html> <script>
+function toggleTheme() {
+
+    document.body.classList.toggle("light-theme");
+
+    const btn = document.querySelector(".theme-toggle");
+
+    if(document.body.classList.contains("light-theme")){
+        btn.innerHTML = "☀️";
+        localStorage.setItem("theme","light");
+    } else {
+        btn.innerHTML = "🌙";
+        localStorage.setItem("theme","dark");
+    }
+}
+
+window.addEventListener("load", () => {
+
+    const btn = document.querySelector(".theme-toggle");
+
+    if(localStorage.getItem("theme") === "light"){
+        document.body.classList.add("light-theme");
+        btn.innerHTML = "☀️";
+    }
+
+});
+</script>
+
