@@ -5,30 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RELICS — Action Figures & Antiques</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>.theme-toggle{
+<style>.
+    
+<style>
+
+.theme-toggle{
     width:42px;
     height:42px;
     border:1px solid var(--border);
     background:transparent;
     color:var(--gold);
-    font-size:18px;
-    cursor:none;
 }
 
 .theme-toggle:hover{
     background:var(--gold);
     color:var(--black);
 }
-  :root body.light-theme{
-    --black:#f7f4ee;
-    --off-black:#ffffff;
-    --dark:#ece7dc;
-    --cream:#111111;
-    --cream-dark:#333333;
-    --gray:#555555;
-    --border:rgba(0,0,0,.12);
+
+:root{
+    --black:#0a0a0a;
+    --gold:#c9a84c;
 }
-  {
+
+body.light-theme{
+    --black:#f7f4ee;
+    --cream:#111111;
+}
+
+body{
+    background:var(--black);
+}
+
+</style>  
+    
+:root{
     --black: #0a0a0a;
     --off-black: #111111;
     --dark: #1a1a1a;
@@ -41,7 +51,7 @@
     --white: #ffffff;
     --gray: #888;
     --border: rgba(201,168,76,0.25);
-  }
+}
   
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
