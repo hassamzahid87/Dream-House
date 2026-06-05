@@ -48,27 +48,31 @@
 
   html { scroll-behavior: smooth; }
 <script>
-
-function toggleTheme(){
+function toggleTheme() {
 
     document.body.classList.toggle("light-theme");
 
+    const btn = document.querySelector(".theme-toggle");
+
     if(document.body.classList.contains("light-theme")){
+        btn.innerHTML = "☀️";
         localStorage.setItem("theme","light");
-    }else{
+    } else {
+        btn.innerHTML = "🌙";
         localStorage.setItem("theme","dark");
     }
-
 }
 
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
 
-    if(localStorage.getItem("theme")==="light"){
+    const btn = document.querySelector(".theme-toggle");
+
+    if(localStorage.getItem("theme") === "light"){
         document.body.classList.add("light-theme");
+        btn.innerHTML = "☀️";
     }
 
 });
-
 </script>
   body {
     background: var(--black);
